@@ -1,0 +1,62 @@
+*,*::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: rgb(33, 40, 47);
+}
+
+.container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+}
+
+.overlay {
+  z-index: 1;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: rgba(247, 247, 247, 0.068);
+}
+
+path {
+  stroke: tomato;
+  fill: tomato;
+  stroke-dasharray: 15;
+  opacity: 10;
+  animation: animate 2.5s ease-in-out
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    fill: none;
+    stroke-dashoffset: 15;
+  }
+
+  30% {
+    opacity: 10;
+    fill: none;
+    stoke-dashoffset: 15;
+  }
+
+  90% {
+    fill: rgba(255, 255, 255, 0);
+  }
+  100%{
+    opacity: 10;
+    fill: tomato;
+    stoke-dashoffset: 15;
+  }
+}
+
+
